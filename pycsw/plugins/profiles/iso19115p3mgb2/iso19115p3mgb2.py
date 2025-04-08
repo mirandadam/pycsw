@@ -2,11 +2,10 @@
 # =================================================================
 #
 # Authors: Vincent Fazio <vincent.fazio@csiro.au>
-#          Daniel Miranda <miranda.dam@pf.gov.br>
-#          Pablo Lima <pablo.pol@pf.gov.br>
+#          Daniel Miranda <miranda.dam@pf.gov.br>, Pablo Lima <pablo.pol@pf.gov.br>
 #
 # Copyright (c) 2023 CSIRO Australia
-# Copyright (c) 2025 Inteligeo Brazil
+# Copyright (c) 2025 Daniel Miranda
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -633,7 +632,7 @@ class ISO19115p3mgb2(profile.Profile):
                 org_val = util.getqattr(result, queryables['mdb:OrganisationName']['dbcol'])
                 if org_val:
                     org_name = build_path(ci_org, ['cit:name', 'gco:CharacterString'], self.namespaces)
-                    org_name.text = 'Testando' #org_val
+                    org_name.text = org_val
 
                 # Get address, phone etc. from contacts
                 cjson = util.getqattr(result,self.context.md_core_model['mappings']['pycsw:Contacts'])
