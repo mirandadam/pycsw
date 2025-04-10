@@ -2,8 +2,6 @@
   <!-- <include schemaLocation="mpc.xsd"/> -->
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <!-- Arquivo editado por Emerson Xavier 2020 -->
-  <!-- File edited by Inteligeo team in 2025 -->
   <element name="MD_PortrayalCatalogueReference" substitutionGroup="mcc:Abstract_PortrayalCatalogueInformation" type="mpc:MD_PortrayalCatalogueReference_Type">
     <annotation>
       <documentation>information identifying the portrayal catalogue used</documentation>

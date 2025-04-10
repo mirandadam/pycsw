@@ -7,5 +7,4 @@
   <include schemaLocation="lineage.xsd"/>
   <!--  <include schemaLocation="lineageImagery.xsd"/> -->
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <!-- Arquivo editado por Emerson Xavier 2020 -->
 </schema>

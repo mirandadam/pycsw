@@ -2,9 +2,8 @@
   <include schemaLocation="cit.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <!-- Arquivo editado por Emerson Xavier 2020 -->
-  <!-- File edited by Inteligeo team in 2025 -->
-  <!-- Inclusion Perfil MGB -->
+
+  <!-- Inclusion Perfil MGB 2.0 -->
   <element name="CI_UFCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>Lista controlada que indica as Unidades da Federação do Brasil</documentation>

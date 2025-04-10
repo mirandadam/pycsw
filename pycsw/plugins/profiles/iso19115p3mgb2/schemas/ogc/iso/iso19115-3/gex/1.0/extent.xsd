@@ -7,8 +7,7 @@
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gmw/1.0" schemaLocation="../../../../19115/-3/gmw/1.0/gmw.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
-  <!-- Arquivo editado por Emerson Xavier 2020 -->
-  <!-- File edited by Inteligeo team in 2025 -->
+
   <element name="EX_BoundingPolygon" substitutionGroup="gex:AbstractEX_GeographicExtent" type="gex:EX_BoundingPolygon_Type">
     <annotation>
       <documentation>enclosing geometric object which locates the resource, expressed as a set of (x,y) coordinate (s) NOTE: If a polygon is used it should be closed (last point replicates first point)</documentation>

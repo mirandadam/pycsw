@@ -7,6 +7,5 @@
   targetNamespace="http://standards.iso.org/iso/19115/-3/mac/1.0" version="1.0">
   
   <!-- <include schemaLocation="acquisitionInformationImagery.xsd"/> -->
-  <!-- Arquivo editado por Emerson Xavier 2020 -->
   
 </schema>
