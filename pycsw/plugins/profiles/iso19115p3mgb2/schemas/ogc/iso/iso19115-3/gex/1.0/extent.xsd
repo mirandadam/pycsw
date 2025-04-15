@@ -221,6 +221,7 @@
               <documentation>highest vertical extent contained in the resource</documentation>
             </annotation>
           </element>
+          <!-- Modified as per Perfil MGB 2.0 -->
           <element minOccurs="1" name="verticalCRSId" type="mcc:Abstract_ReferenceSystem_PropertyType"/>
           <element minOccurs="0" name="verticalCRS" type="gmw:SC_CRS_PropertyType"/>
         </sequence>

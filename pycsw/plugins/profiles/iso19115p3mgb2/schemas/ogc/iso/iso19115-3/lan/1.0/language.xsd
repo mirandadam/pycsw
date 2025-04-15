@@ -5,10 +5,8 @@
   xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" elementFormDefault="qualified"
   targetNamespace="http://standards.iso.org/iso/19115/-3/lan/1.0" version="1.0">
   <!-- <include schemaLocation="lan.xsd"/> -->
-  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0"
-    schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
-  <import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0"
-    schemaLocation="../../../../19115/-3/cit/1.0/cit.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
+  <import namespace="http://standards.iso.org/iso/19115/-3/cit/1.0" schemaLocation="../../../../19115/-3/cit/1.0/cit.xsd"/>
 
   <element name="CountryCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
   <complexType name="CountryCode_PropertyType">
@@ -57,5 +55,7 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+
   <!-- PT_LocaleContainer removed -->
+
 </schema>

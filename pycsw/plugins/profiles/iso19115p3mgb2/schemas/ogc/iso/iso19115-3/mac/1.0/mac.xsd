@@ -6,6 +6,7 @@
   xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified"
   targetNamespace="http://standards.iso.org/iso/19115/-3/mac/1.0" version="1.0">
   
+  <!-- Elements are not handled by Perfil MGB 2.0 -->
   <!-- <include schemaLocation="acquisitionInformationImagery.xsd"/> -->
   
 </schema>

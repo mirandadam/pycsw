@@ -28,7 +28,8 @@
               <documentation>type of resource and/or extent to which the lineage information applies</documentation>
             </annotation>
           </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="mcc:Abstract_Citation_PropertyType"/>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!-- <element maxOccurs="unbounded" minOccurs="0" name="additionalDocumentation" type="mcc:Abstract_Citation_PropertyType"/> -->
           <element maxOccurs="unbounded" minOccurs="0" name="source" type="mrl:LI_Source_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="processStep" type="mrl:LI_ProcessStep_PropertyType"/>
         </sequence>
@@ -56,11 +57,14 @@
               <documentation>description of the event, including related parameters or tolerances</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element minOccurs="0" name="rationale" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>requirement or purpose for the process step</documentation>
             </annotation>
           </element>
+          -->
           <element minOccurs="0" name="stepDateTime" type="gmw:TM_Primitive_PropertyType">
             <annotation>
               <documentation>date, time, range or period of process step</documentation>
@@ -76,11 +80,14 @@
               <documentation>process step documentation</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element minOccurs="0" name="scope" type="mcc:MD_Scope_PropertyType">
             <annotation>
               <documentation>type of resource and/or extent to which the process step applies</documentation>
             </annotation>
           </element>
+          -->
           <element maxOccurs="unbounded" minOccurs="0" name="source" type="mrl:LI_Source_PropertyType"/>
         </sequence>
       </extension>
@@ -102,6 +109,8 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element minOccurs="0" name="description" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>detailed description of the level of the source resource</documentation>
@@ -117,11 +126,15 @@
               <documentation>spatial reference system used by the source resource</documentation>
             </annotation>
           </element>
+          -->
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="sourceCitation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>recommended reference to be used for the source resource</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element maxOccurs="unbounded" minOccurs="0" name="sourceMetadata" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>identifier and link to source metadata</documentation>
@@ -132,6 +145,7 @@
               <documentation>type of resource and/or extent of the source</documentation>
             </annotation>
           </element>
+          -->
           <element maxOccurs="unbounded" minOccurs="0" name="sourceStep" type="mrl:LI_ProcessStep_PropertyType"/>
         </sequence>
       </extension>

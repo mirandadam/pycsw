@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/srv/2.0" version="2.0">
-  <!-- <include schemaLocation="srv.xsd"/> -->
+  <include schemaLocation="srv.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mri/1.0" schemaLocation="../../../../19115/-3/mri/1.0/mri.xsd"/>
@@ -29,6 +29,7 @@
               <documentation>scoped identifier of the resource in the context of the given service instance NOTE: name of the resources (i.e. dataset) as it is used by a service instance (e.g. layer name or featureTypeName).</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="resourceReference" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>reference to the dataset on which the service operates</documentation>
@@ -58,7 +59,10 @@
     </sequence>
     <attribute ref="gco:nilReason"/>
   </complexType>
+
+  <!-- Modified according to Perfil MGB 2.0 -->
   <!-- SV_OperationChainMetadata removed -->
+
   <element name="SV_OperationMetadata" substitutionGroup="gco:AbstractObject" type="srv:SV_OperationMetadata_Type">
     <annotation>
       <documentation>describes the signature of one and only one method provided by the service</documentation>
@@ -83,18 +87,24 @@
               <documentation>free text description of the intent of the operation and the results of the operation</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element minOccurs="0" name="invocationName" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>the name used to invoke this interface within the context of the DCP. The name is identical for all DCPs.</documentation>
             </annotation>
           </element>
+          -->
           <element maxOccurs="unbounded" name="connectPoint" type="mcc:Abstract_OnlineResource_PropertyType">
             <annotation>
               <documentation>handle for accessing the service interface</documentation>
             </annotation>
           </element>
-          <!-- element name="parameter" removed -->
-          <!-- element name="dependsOn" removed -->
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
+          <element maxOccurs="unbounded" minOccurs="0" name="parameter" type="srv:SV_Parameter_PropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="dependsOn" type="srv:SV_OperationMetadata_PropertyType"/>
+          -->
         </sequence>
       </extension>
     </complexContent>
@@ -106,8 +116,11 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
+
+  <!-- Modified according to Perfil MGB 2.0 -->
   <!-- SV_Parameter removed -->
   <!-- SV_ParameterDirection removed -->
+
   <element name="SV_ServiceIdentification" substitutionGroup="mri:AbstractMD_Identification" type="srv:SV_ServiceIdentification_Type">
     <annotation>
       <documentation>identification of capabilities which a service provider makes available to a service user through a set of interfaces that define a behaviour - See ISO 19119 for further information</documentation>
@@ -142,16 +155,22 @@
               <documentation>further description of the data coupling in the case of tightly coupled services</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element maxOccurs="unbounded" minOccurs="0" name="operatedDataset" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>provides a reference to the dataset on which the service operates</documentation>
             </annotation>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="profile" type="mcc:Abstract_Citation_PropertyType"/>
+          -->
           <element maxOccurs="unbounded" minOccurs="0" name="serviceStandard" type="mcc:Abstract_Citation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="containsOperations" type="srv:SV_OperationMetadata_PropertyType"/>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!-- 
           <element maxOccurs="unbounded" minOccurs="0" name="operatesOn" type="mri:MD_DataIdentification_PropertyType"/>
-          <!-- element name="containsChain" removed -->
+          <element maxOccurs="unbounded" minOccurs="0" name="containsChain" type="srv:SV_OperationChainMetadata_PropertyType"/> 
+          -->
         </sequence>
       </extension>
     </complexContent>

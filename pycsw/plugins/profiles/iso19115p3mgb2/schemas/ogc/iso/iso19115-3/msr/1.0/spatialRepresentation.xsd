@@ -158,6 +158,7 @@
               <documentation>description of geographic position points used to test the accuracy of the georeferenced grid data</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <!--
           <element maxOccurs="4" minOccurs="2" name="cornerPoints" type="gmw:GM_Point_PropertyType">
             <annotation>
@@ -175,6 +176,8 @@
               <documentation>point in a pixel corresponding to the Earth location of the pixel</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <!--
           <element minOccurs="0" name="transformationDimensionDescription" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>general description of the transformation</documentation>
@@ -185,6 +188,7 @@
               <documentation>information about which grid axes are the spatial (map) axes</documentation>
             </annotation>
           </element>
+          -->
         </sequence>
       </extension>
     </complexContent>
@@ -196,7 +200,11 @@
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <!-- Georeferenceable removed -->  
+
+  <!-- Modified according to Perfil MGB 2.0 -->
+  <!-- Georeferenceable removed -->
+
+  <!-- SMR 2015-02-12 manually change substituion group from AbstractObject to AbstractMD_SpatialRepresentation -->
   <element name="MD_GridSpatialRepresentation" substitutionGroup="msr:AbstractMD_SpatialRepresentation" type="msr:MD_GridSpatialRepresentation_Type">
     <annotation>
       <documentation>information about grid spatial objects in the resource</documentation>
@@ -211,6 +219,7 @@
               <documentation>number of independent spatial-temporal axes</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="axisDimensionProperties" type="msr:MD_Dimension_PropertyType">
             <annotation>
               <documentation>information about spatial-temporal axis properties</documentation>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mdb/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/mdb/1.0" version="1.0">
   <include schemaLocation="mdb.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19157/-2/dqc/1.0" schemaLocation="../../../../19157/-2/dqc/1.0/dqc.xsd"/>
@@ -14,7 +15,9 @@
     <complexContent>
       <extension base="mcc:Abstract_Metadata_Type">
         <sequence>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="metadataIdentifier" type="mcc:MD_Identifier_PropertyType"/>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="defaultLocale" type="lan:PT_Locale_PropertyType">
             <annotation>
               <documentation>Provides information about an alternatively used localized character string for a linguistic extension</documentation>
@@ -25,7 +28,9 @@
               <documentation>Identifier and onlineResource for a parent metadata record</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="metadataScope" type="mdb:MD_MetadataScope_PropertyType"/>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="contact" type="mcc:Abstract_Responsibility_PropertyType">
             <annotation>
               <documentation>party responsible for the metadata information</documentation>
@@ -41,6 +46,7 @@
               <documentation>Citation for the standards to which the metadata conforms</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="metadataProfile" type="mcc:Abstract_Citation_PropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="alternativeMetadataReference" type="mcc:Abstract_Citation_PropertyType">
             <annotation>

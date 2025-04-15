@@ -2,6 +2,6 @@
   <annotation>
     <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document user-defined metadata extensions&lt;/font&gt;.</documentation>
   </annotation>
-  <!-- <include schemaLocation="metadataExtension.xsd"/> -->
+  <include schemaLocation="metadataExtension.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
 </schema>

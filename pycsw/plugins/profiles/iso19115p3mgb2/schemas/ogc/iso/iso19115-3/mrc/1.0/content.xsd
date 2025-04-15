@@ -21,6 +21,7 @@ xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/1.0" elementFormDefault="qu
               <documentation>type of information represented by the value</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="attribute" type="mrc:MD_RangeDimension_PropertyType"/>
         </sequence>
       </extension>
@@ -128,7 +129,31 @@ Note in 19115-3 implementation, this class is implemented by abstract class _Con
     <attributeGroup ref="gco:ObjectReference"/>
     <attribute ref="gco:nilReason"/>
   </complexType>
-  <!-- MD_FeatureCatalogue removed -->
+  <element name="MD_FeatureCatalogue" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:MD_FeatureCatalogue_Type">
+    <annotation>
+      <documentation>a catalogue of feature types</documentation>
+    </annotation>
+  </element>
+  <complexType name="MD_FeatureCatalogue_Type">
+    <complexContent>
+      <extension base="mcc:Abstract_ContentInformation_Type">
+        <sequence>
+          <element maxOccurs="unbounded" name="featureCatalogue" type="fcc:Abstract_FeatureCatalogue_PropertyType">
+            <annotation>
+              <documentation>the catalogue of feature types, attribution, operations, and relationships used by the resource</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MD_FeatureCatalogue_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="mrc:MD_FeatureCatalogue"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
   <element name="MD_FeatureCatalogueDescription" substitutionGroup="mcc:Abstract_ContentInformation" type="mrc:MD_FeatureCatalogueDescription_Type">
     <annotation>
       <documentation>information identifying the feature catalogue or the conceptual schema</documentation>
@@ -158,6 +183,7 @@ Note in 19115-3 implementation, this class is implemented by abstract class _Con
               <documentation>subset of feature types from cited feature catalogue occurring in dataset</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element maxOccurs="unbounded" minOccurs="1" name="featureCatalogueCitation" type="mcc:Abstract_Citation_PropertyType">
             <annotation>
               <documentation>complete bibliographic reference to one or more external feature catalogues</documentation>

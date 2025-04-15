@@ -12,9 +12,9 @@
   <element name="CI_UFCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>Lista controlada que indica as Unidades da Federação do Brasil</documentation>
+      <documentation>Controlled list indicating the Federation Units of Brazil</documentation>
     </annotation>
   </element>
-
   <complexType name="CI_UFCode_PropertyType">
     <sequence minOccurs="0">
       <element ref="cit:CI_UFCode"/>
@@ -42,6 +42,7 @@
               <documentation>city of the location</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="0" name="administrativeArea" type="cit:CI_UFCode_PropertyType">
             <annotation>
               <documentation>state, province of the location</documentation>
@@ -218,7 +219,7 @@
     <complexContent>
       <extension base="mcc:Abstract_TypedDate_Type">
         <sequence>
-          <!-- <element name="date" type="gco:DateTime_PropertyType"> -->
+<!--          <element name="date" type="gco:DateTime_PropertyType">-->
           <!-- use of gco:DateTime property did not implement the intention of the 19115-1 committee, the desire was
           for the more general representation allowing date, datetime, yy, yymm, etc. 
           See discussion on github https://github.com/ISO-TC211/XML/issues/117https://github.com/ISO-TC211/XML/issues/117
@@ -381,7 +382,8 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="name" type="gco:CharacterString_PropertyType">
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <element minOccurs="1" name="name" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>name of the party</documentation>
             </annotation>
@@ -468,7 +470,8 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
-          <element minOccurs="0" name="name" type="gco:CharacterString_PropertyType">
+          <!-- Modified according to Perfil MGB 2.0 -->
+          <element minOccurs="1" name="name" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>name of the series, or aggregate resource, of which the resource is a part</documentation>
             </annotation>

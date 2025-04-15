@@ -3,6 +3,7 @@
     <documentation>Namespace for XML elements &lt;font color="#1f497d"&gt;used to document schema and amount of content in a structured resource.&lt;/font&gt;</documentation>
   </annotation>
   <include schemaLocation="content.xsd"/>
+  <!-- Modified according to Perfil MGB 2.0 -->
   <!-- <include schemaLocation="contentInformationImagery.xsd"/> -->
   <import namespace="http://standards.iso.org/iso/19110/fcc/1.0" schemaLocation="../../../../19110/fcc/1.0/fcc.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/lan/1.0" schemaLocation="../../../../19115/-3/lan/1.0/lan.xsd"/>

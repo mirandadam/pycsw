@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/cit/1.0" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" elementFormDefault="qualified" targetNamespace="http://standards.iso.org/iso/19115/-3/cit/1.0" version="1.0">
   <include schemaLocation="cit.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/gco/1.0" schemaLocation="../../../../19115/-3/gco/1.0/gco.xsd"/>
   <import namespace="http://standards.iso.org/iso/19115/-3/mcc/1.0" schemaLocation="../../../../19115/-3/mcc/1.0/mcc.xsd"/>
@@ -7,9 +8,9 @@
   <element name="CI_UFCode" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type">
     <annotation>
       <documentation>Lista controlada que indica as Unidades da Federação do Brasil</documentation>
+      <documentation>Controlled list indicating the Federation Units of Brazil</documentation>
     </annotation>
   </element>
-
   <complexType name="CI_UFCode_PropertyType">
     <sequence minOccurs="0">
       <element ref="cit:CI_UFCode"/>
@@ -37,6 +38,7 @@
               <documentation>city of the location</documentation>
             </annotation>
           </element>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="0" name="administrativeArea" type="cit:CI_UFCode_PropertyType">
             <annotation>
               <documentation>state, province of the location</documentation>
@@ -372,6 +374,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="name" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>name of the party</documentation>
@@ -455,6 +458,7 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="name" type="gco:CharacterString_PropertyType">
             <annotation>
               <documentation>name of the series, or aggregate resource, of which the resource is a part</documentation>

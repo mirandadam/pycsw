@@ -31,6 +31,7 @@
     <complexContent>
       <extension base="mcc:Abstract_MaintenanceInformation_Type">
         <sequence>
+          <!-- Modified according to Perfil MGB 2.0 -->
           <element minOccurs="1" name="maintenanceAndUpdateFrequency" type="mmi:MD_MaintenanceFrequencyCode_PropertyType">
             <annotation>
               <documentation>frequency with which changes and additions are made to the resource after the initial resource is completed</documentation>
